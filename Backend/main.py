@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/upload", method='POST')
 def upload_file():
-    
+    request.files()
     response = make_response("<h1>Success</h1>")
     response.status_code = 200
     return response
