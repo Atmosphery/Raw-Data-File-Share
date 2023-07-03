@@ -1,7 +1,14 @@
 <script>
-    import Directory from "../directory.svelte"
+    import { onMount } from "svelte";
+    import Home from "$lib/home.svelte";
+    export let data;
+    console.log(data.path)
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<Home directories={data.directories} files={data.files} path={data.path}/>
 
+<style>
+    :global(:root) {
+        padding: 2rem 6rem 6rem 6rem;
+    }
+</style>
