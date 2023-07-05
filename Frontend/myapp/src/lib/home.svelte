@@ -3,6 +3,7 @@
     import file from "svelte-awesome/icons/file";
     import { host } from "$lib/tools.js";
     import FileExplorer from "./FileExplorer/file_explorer.svelte";
+    import {Router} from "svelte-routing";
     import { writable } from "svelte/store"
     export let data;
     
@@ -21,6 +22,9 @@
         multiple={true}
     /><br />
     <input type="button" value="Submit Files" />
-    <FileExplorer data={data}/>
+    <Router>
+        <FileExplorer data={data}/>
+    </Router>
+    
 </form>
 
