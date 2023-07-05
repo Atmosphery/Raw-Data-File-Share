@@ -2,10 +2,10 @@
     import { onMount } from "svelte";
     import Home from "$lib/home.svelte";
     export let data;
-    console.log(data.path)
+    //console.log(data)
 </script>
 
-<Home directories={data.directories} files={data.files} path={data.path}/>
+<Home data={data}/>
 
 <style>
     :global(:root) {

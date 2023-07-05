@@ -1,10 +1,10 @@
 <script>
     import { onMount } from "svelte";
-    import Explorer from "$lib/Explorer/explorer.svelte"
     import file from "svelte-awesome/icons/file";
     import { host } from "$lib/tools.js";
-    
-    export let files, directories, path;
+    import FileExplorer from "./FileExplorer/file_explorer.svelte";
+    import { writable } from "svelte/store"
+    export let data;
     
 </script>
 
@@ -21,5 +21,6 @@
         multiple={true}
     /><br />
     <input type="button" value="Submit Files" />
+    <FileExplorer data={data}/>
 </form>
 
