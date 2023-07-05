@@ -14,6 +14,7 @@
         <div>
             <Link to={`/${path}/${directory}`}>{directory}</Link>
         </div>
+        <Route path={ `/${path}/${directory}`} component={} />
         {/each}
     </nav>
 </Router>
